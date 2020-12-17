@@ -15,7 +15,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Sonar Analysis') {
+     /*   stage('Sonar Analysis') {
             steps {
                 echo 'sonar test analysis'
                 sh 'mvn test sonar:sonar -Dsonar.host.url=http://54.164.204.148:9000 -Dsonar.login=d2bcb33972f4b4dc7273fd915937238c86177142'
@@ -26,7 +26,7 @@ pipeline {
                 echo 'publish artifact'
                 sh 'mvn deploy'
             }
-        }
+        } */
            stage('DeployApp') {
             steps {
                 echo 'deploy artifact to production'
